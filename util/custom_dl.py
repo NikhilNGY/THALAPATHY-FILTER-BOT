@@ -173,8 +173,8 @@ class ByteStreamer:
     ) -> Union[str, None]:
         """
         Custom generator that yields the bytes of the media file.
-        Modded from <https://github.com/eyaadh/megadlbot_oss/blob/master/mega/telegram/utils/custom_download.py#L20>
-        Thanks to Eyaadh <https://github.com/eyaadh>
+        Modded from <https://t.me/KR_Picture>
+        Thanks to Nikhil<https://github.com/Nikhil5757h>
         """
         client = self.client
         work_loads[index] += 1
