@@ -1,12 +1,15 @@
 FROM python:3.10.8-slim-bullseye
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
+RUN apt update && apt upgrade -y && apt install git -y
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /THALAPATHY-FILTER-BOT
+COPY requirements.txt /requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade -r /requirements.txt
+
 WORKDIR /THALAPATHY-FILTER-BOT
 COPY start.sh /start.sh
+
+# Ensure start.sh is executable
+RUN chmod +x /start.sh
+
 CMD ["/bin/bash", "/start.sh"]
