@@ -1928,14 +1928,14 @@ async def auto_filter(client, msg, spoll=False):
             cap = f"""<strong><blockquote>
 Hey {message.from_user.mention} 👋🏻
 
-➤Nᴀᴍᴇ: {title} {year}
+➤Nᴀᴍᴇ: {file_name} {files_ize}
 ➤Yᴏᴜʀ Fɪʟᴇ Rᴇᴀᴅʏ Nᴏᴡ👇
 </blockquote></strong>"""
         else:
             cap = f"""<strong><blockquote>
 Hey {message.from_user.mention} 👋🏻
 
-➤Nᴀᴍᴇ: {title} {year}
+➤Nᴀᴍᴇ: {file_name} {files_ize}
 ➤Yᴏᴜʀ Fɪʟᴇ Rᴇᴀᴅʏ Nᴏᴡ👇
 </blockquote></strong>"""
             for file in files:
