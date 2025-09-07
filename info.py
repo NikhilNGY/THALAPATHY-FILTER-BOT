@@ -12,61 +12,61 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
+SESSION = environ.get('SESSION', 'KR_PICTURE')
 API_ID = int(environ.get('API_ID', '22525529'))
 API_HASH = environ.get('API_HASH', '840111f82bbd1d2d3de5055afccf6a92')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6065501510:AAHTTxh94rg3LKYhy762fEF9xlqiw5whsG0")
+BOT_TOKEN = environ.get('BOT_TOKEN', " ")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/c5911147b9a1c7530c222.jpg https://graph.org/file/c2f67160d556e5d1c4828.jpg https://graph.org/file/4cd01006da6410de18d41.jpg https://telegra.ph/file/ac524f66eec140ec69db5.jpg https://telegra.ph/file/bd94ba94b8bd34793cc81.jpg https://telegra.ph/file/0fd19a01130a1dec30ee2.jpg https://telegra.ph/file/9e71045e92e89ecf0b1cd.jpg https://telegra.ph/file/f739b561482df0be0a644.jpg https://graph.org/file/369640caced6891e79c3e.jpg https://graph.org/file/68a230c0f57e222448dab.jpg https://graph.org/file/45623ab4865a943ce0b0d.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/a27dc8fe434e6b846b0f8.jpg")
+PICS = (environ.get('PICS', 'https://envs.sh/t3L.jpg')).split()  #SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/f7f2a532fe4b990044507.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5450011131').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', ' -1001596778007').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2068233407, 2098589219').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001683081282').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '2068233407, 2098589219').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '5450011131').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001906504812')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001906504812')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002241869735')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002617590596')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Ms:Ms@cluster0.ms8iefs.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Ms")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', " ")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Filter2")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'KR_PICTURE')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'speedlinkurl.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '02de79eb74304b21efb678727e8eac905fc81d17')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'vplink.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'ab42d0b5656f5c774f800dacb6739342b6f094aa')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', "True"))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001396923650').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+sGC3kK3Q9L1kNDNl')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/PriMe_SpoT')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/PriMe_SpoT')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+x6OfRDdUPrUwZTZl')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+fDkIGNmk5BU5ODVl')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/how_to_opan_linkz/6')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', 'Piracy Is Crime')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001790068959'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+sGC3kK3Q9L1kNDNl')
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((environ.get('IMDB', "False")), True)
+MSG_ALRT = environ.get('MSG_ALRT', 'TEAM: @KR_Picture')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001693006436'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+x6OfRDdUPrUwZTZl')
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
-AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "False")), True)
+AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
@@ -75,11 +75,11 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001945421680')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001683081282')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
-DELETE_TIME = int(environ.get('DELETE_TIME', '600'))
+DELETE_TIME = int(environ.get('DELETE_TIME', '900'))
 
 LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
 
@@ -101,9 +101,9 @@ URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "https://{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
-SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
+SESSION_NAME = str(environ.get('SESSION_NAME', 'KR_PICTURE'))
 MULTI_CLIENT = False
-name = str(environ.get('name', 'LazyPrincess'))
+name = str(environ.get('name', 'KR_PICTURE'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 if 'DYNO' in environ:
     ON_HEROKU = True
@@ -128,3 +128,7 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+
+
+
+
