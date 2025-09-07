@@ -35,7 +35,10 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe my channel to use the bot',
+                           switch_pm_text=(
+                "🙏 Please join the channel to access files.\n\n"
+                "ಚಲನಚಿತ್ರ ಪಡೆಯಲು JOIN CHANNEL ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಸೇರಿ."
+            ),
                            switch_pm_parameter="subscribe")
         return
 
